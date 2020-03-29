@@ -1,15 +1,15 @@
 import axios from 'axios'
 
 const Axios = axios.create({
-    baseURL: "https://api.airtable.com/v0/appcQDvLw3YiggMPP/Projects"
+    baseURL: "http://127.0.0.1:5000/airtable_api"
 });
 
-const airtableAPIKey = process.env.VUE_APP_AIRTABLEKEY
-Axios.defaults.headers.common = { 'Authorization': `Bearer ` + airtableAPIKey}
+//const airtableAPIKey = process.env.VUE_APP_AIRTABLEKEY
+//Axios.defaults.headers.common = { 'Authorization': `Bearer ` + airtableAPIKey}
 
 export default {
     getProjects() {
-        return Axios.get("?maxRecords=3&view=All%20projects")
+        return Axios.get()
     },
     getProject(slug) {
         return Axios.get("?filterByFormula={Slug}='" + slug + "'")

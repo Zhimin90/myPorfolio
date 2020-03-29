@@ -12,6 +12,8 @@ class Config:
     DOC_USERNAME = 'api'
     DOC_PASSWORD = 'password'
 
+    airtableAPIKey = os.environ['VUE_APP_AIRTABLEKEY']
+
 
 class DevConfig(Config):
     DEBUG = True
