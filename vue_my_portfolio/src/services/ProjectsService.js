@@ -1,7 +1,8 @@
 import axios from 'axios'
 
+const baseURL = "http://127.0.0.1:5000/airtable_api"
 const Axios = axios.create({
-    baseURL: "http://127.0.0.1:5000/airtable_api"
+    baseURL
 });
 
 //const airtableAPIKey = process.env.VUE_APP_AIRTABLEKEY
@@ -12,6 +13,6 @@ export default {
         return Axios.get()
     },
     getProject(slug) {
-        return Axios.get("http://127.0.0.1:5000/airtable_api" + "?filterByFormula={Slug}='" + slug + "'")
+        return Axios.get(baseURL + "?filterByFormula={Slug}='" + slug + "'")
     }
 }
