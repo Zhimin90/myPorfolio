@@ -37,7 +37,7 @@
    <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        Built by Zhimin Zou with Vue.js, Bulma, and Airtable.
+        Built by Zhimin Zou with Flask, Vue.js, Bulma, and Airtable. <a href="https://github.com/Zhimin90/myPorfolio">Github link</a>
       </p>
     </div>
   </footer>
