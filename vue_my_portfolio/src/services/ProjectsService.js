@@ -12,6 +12,6 @@ export default {
         return Axios.get()
     },
     getProject(slug) {
-        return Axios.get("?filterByFormula={Slug}='" + slug + "'")
+        return Axios.get("http://127.0.0.1:5000/airtable_api" + "?filterByFormula={Slug}='" + slug + "'")
     }
 }
